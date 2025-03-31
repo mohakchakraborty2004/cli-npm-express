@@ -4,7 +4,7 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-const repoUrl = "https://github.com/mohakchakraborty2004/create-express-app.git";
+const repoUrl = "https://github.com/mohakchakraborty2004/express-ts-app-init.git";
 
 // Get the project name from the user's input
 const projectName = process.argv[2] || "my-express-app";
