@@ -1,0 +1,11 @@
+{
+  "name": "express-ts-app-init",
+  "version": "1.0.0",
+  "description": "A CLI to generate an Express app",
+  "bin": {
+    "create-express-app": "./bin/create-express-app.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT"
+}
