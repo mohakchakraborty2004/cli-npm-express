@@ -1,6 +1,6 @@
 {
   "name": "express-ts-app-init",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A CLI to generate an Express app",
   "bin": {
     "express-ts-app-init": "./bin/express-ts-app-init.js"

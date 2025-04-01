@@ -11,14 +11,17 @@ const projectName = process.argv[2] || "my-express-app";
 const targetPath = path.join(process.cwd(), projectName);
 
 console.log(`📦 Cloning template into ${targetPath}...`);
-execSync(`git clone --depth 1 ${repoUrl} ${targetPath}`, { stdio: "inherit" });
+
+// Fix: Wrap paths in quotes to handle spaces
+execSync(`git clone --depth 1 "${repoUrl}" "${targetPath}"`, { stdio: "inherit" });
 
 // Remove .git to detach from the template repo
 fs.rmSync(path.join(targetPath, ".git"), { recursive: true, force: true });
 
-// Install dependencies
 console.log(`📦 Installing dependencies...`);
-execSync(`cd ${projectName} && npm install`, { stdio: "inherit" });
+
+// Fix: Use `cwd` to run `npm install` inside the project directory
+execSync(`npm install`, { cwd: targetPath, stdio: "inherit" });
 
 console.log(`🚀 Express app ready!`);
 console.log(`\n👉 Next steps:\n`);
