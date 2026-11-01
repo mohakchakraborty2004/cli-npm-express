@@ -2,6 +2,10 @@
 
 A simple CLI tool to quickly scaffold an Express.js application using a pre-configured template.
 
+## Project Overview
+
+`express-ts-app-init` is a command-line tool for generating Express applications from a GitHub template. It clones the template into a project directory, removes the template's Git history, and installs dependencies so you can start developing.
+
 ##  Features
 - Instantly sets up an Express.js app with TypeScript support
 - Includes middleware, routes, and environment setup
